@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>October10</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+      }
+      .frame {
+        width: 400px;
+        height: 400px;
+        background-color: #fefee3;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid lawngreen;
+        border-radius: 20px;
+      }
+      .circle1 {
+        width: 40px;
+        height: 40px;
+        background-color: #d68c45;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        animation: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+      .circle2 {
+        width: 40px;
+        height: 40px;
+        background-color: #d68c45;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        animation: example2;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+      .circle3 {
+        width: 70px;
+        height: 70px;
+        background-color: #d68c45;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        animation: example3;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+      .circle4 {
+        width: 70px;
+        height: 70px;
+        background-color: #d68c45;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        animation: example4;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+      .circle5 {
+        width: 200px;
+        height: 200px;
+        background-color: #d68c45;
+        border-radius: 50%;
+        position: absolute;
+      }
+      .circle6 {
+        width: 130px;
+        height: 130px;
+        background-color: #d68c45;
+        border-radius: 50%;
+        position: absolute;
+        top: 30px;
+      }
+      .circle7 {
+        width: 30px;
+        height: 30px;
+        background-color: #fefee3;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        left: 210px;
+      }
+      .circle8 {
+        width: 30px;
+        height: 30px;
+        background-color: #fefee3;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        left: 160px;
+      }
+      .circle9 {
+        width: 170px;
+        height: 90px;
+        background-color: #fefee3;
+        border-radius: 50%;
+        position: absolute;
+        top: 140px;
+      }
+      @keyframes example {
+        0% {
+          top: 50px;
+          left: 50px;
+        }
+
+        50% {
+          top: 90px;
+          left: 150px;
+        }
+        100% {
+          top: 50px;
+          left: 50px;
+        }
+      }
+      @keyframes example2 {
+        0% {
+          top: 50px;
+          right: 50px;
+        }
+        50% {
+          top: 90px;
+          right: 150px;
+        }
+        100% {
+          top: 50px;
+          right: 50px;
+        }
+      }
+      @keyframes example3 {
+        0% {
+          bottom: 50px;
+          right: 50px;
+        }
+        50% {
+          bottom: 120px;
+          right: 150px;
+        }
+        100% {
+          bottom: 50px;
+          right: 50px;
+        }
+      }
+      @keyframes example4 {
+        0% {
+          bottm: 50px;
+          left: 50px;
+        }
+        50% {
+          bottom: 150px;
+          left: 150px;
+        }
+        100% {
+          bottm: 50px;
+          left: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+      <div class="circle4"></div>
+      <div class="circle5"></div>
+      <div class="circle6"></div>
+      <div class="circle7"></div>
+      <div class="circle8"></div>
+      <div class="circle9"></div>
+    </div>
+  </body>
+</html>
