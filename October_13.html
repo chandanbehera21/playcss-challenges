@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>October13</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #ccc;
+        border: 10px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .frame {
+        width: 400px;
+        height: 400px;
+        border: 2px solid;
+        background-color: #c1edcc;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+      }
+      .circle1 {
+        width: 100px;
+        height: 100px;
+        background-color: #b0c0bc;
+        border-radius: 100%;
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        padding: 7px;
+        animation: example 5s ease 1s infinite alternate;
+      }
+      .circle2 {
+        width: 100px;
+        height: 100px;
+        background-color: #b0c0bc;
+        border-radius: 100%;
+        position: absolute;
+        top: 10%;
+        right: 15%;
+        padding: 7px;
+        animation: example 5s ease 1s infinite alternate;
+      }
+      .circle3 {
+        width: 50px;
+        height: 50px;
+        background-color: #c1edcc;
+        z-index: 55;
+        border-radius: 50%;
+      }
+      .circle4 {
+        width: 50px;
+        height: 50px;
+        background-color: #c1edcc;
+        border-radius: 100%;
+      }
+      .circle5 {
+        width: 190px;
+        height: 95px;
+        background-color: #b0c0bc;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 7%;
+        animation: kiss 5s ease 1s infinite alternate;
+      }
+      .box1 {
+        width: 20px;
+        height: 80px;
+        background-color: #b0c0bc;
+      }
+      .nose1 {
+        position: absolute;
+        width: 10px;
+        height: 30px;
+        background-color: #b0c0bc;
+        border-radius: 40%;
+        top: 209px;
+        left: 178px;
+        animation: nose 5s ease 1s infinite alternate;
+      }
+      .nose2 {
+        position: absolute;
+        width: 10px;
+        height: 30px;
+        background-color: #b0c0bc;
+        border-radius: 40%;
+        top: 209px;
+        right: 178px;
+        animation: nose 5s ease 1s infinite alternate;
+      }
+      .box2 {
+        width: 15px;
+        height: 50px;
+        background-color: #b0c0bc;
+        position: absolute;
+        bottom: 28%;
+        left: 30%;
+        rotate: 65deg;
+      }
+      .box3 {
+        width: 15px;
+        height: 50px;
+        background-color: #b0c0bc;
+        position: absolute;
+        bottom: 28%;
+        right: 30%;
+        rotate: -65deg;
+      }
+      @keyframes example {
+        from {
+          transform: rotate(-60deg);
+        }
+        to {
+          transform: rotate(180deg);
+        }
+      }
+      @keyframes kiss {
+        from {
+          width: 190px;
+          height: 95px;
+        }
+        to {
+          width: 100px;
+          height: 50px;
+        }
+      }
+      @keyframes nose {
+        from {
+          width: 10px;
+          height: 30px;
+        }
+        to {
+          width: 40px;
+          height: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="circle1">
+        <div class="circle3"></div>
+      </div>
+
+      <div class="circle2">
+        <div class="circle4"></div>
+      </div>
+
+      <div class="circle5"></div>
+      <div class="box1"></div>
+      <div class="nose1"></div>
+      <div class="nose2"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+    </div>
+  </body>
+</html>
