@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>October_22</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .frame {
+        width: 400px;
+        height: 400px;
+        border: 2px solid;
+        border-radius: 20px;
+        background-color: #796465;
+        position: relative;
+      }
+      .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #e8d2ae;
+        position: absolute;
+        transform: translate(50%, 50%);
+      }
+      .eye {
+        width: 30px;
+        height: 30px;
+        background: #796465;
+        position: absolute;
+        top: 70px;
+        left: 50px;
+        border-radius: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .dot {
+          width: 20%;
+          height: 60%;
+          background-color: #e8d2ae;
+          border-radius: 60px;
+        }
+      }
+      .eye1 {
+        width: 30px;
+        height: 30px;
+        background: #796465;
+        position: absolute;
+        top: 70px;
+        right: 50px;
+        border-radius: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .dot {
+          width: 20%;
+          height: 60%;
+          background-color: #e8d2ae;
+          border-radius: 60px;
+        }
+      }
+      .smile {
+        width: 15px;
+        height: 40px;
+        position: absolute;
+        background-color: #796465;
+        border-radius: 10px;
+        top: 120px;
+        left: 95px;
+        animation: name 2s ease 1s infinite;
+      }
+      @keyframes name {
+        to {
+          width: 40px;
+          height: 15px;
+          top: 130px;
+          left: 80px;
+        }
+      }
+      .crown {
+        width: 70px;
+        height: 130px;
+        position: absolute;
+        top: 10px;
+        background: #796465;
+        border-radius: 50%;
+        left: 165px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+
+        .midcircle {
+          width: 90%;
+          height: 95%;
+          border-radius: 50%;
+          background: #e8d2ae;
+        }
+      }
+      .sidecir {
+        width: 20px;
+        height: 60px;
+        border-radius: 50%;
+        background: #e8d2ae;
+        position: absolute;
+      }
+      .cr1 {
+        top: 40px;
+        left: 150px;
+        rotate: -25deg;
+        width: 60px;
+        height: 110px;
+      }
+      .cr2 {
+        top: 80px;
+        left: 125px;
+        rotate: -29deg;
+        width: 40px;
+        height: 90px;
+      }
+      .cr3 {
+        top: 40px;
+        right: 150px;
+        rotate: 25deg;
+        width: 60px;
+        height: 110px;
+      }
+      .cr4 {
+        top: 80px;
+        right: 125px;
+        rotate: 29deg;
+        width: 40px;
+        height: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="circle">
+        <div class="eye">
+          <div class="dot"></div>
+        </div>
+        <div class="eye1">
+          <div class="dot"></div>
+        </div>
+        <div class="smile"></div>
+      </div>
+      <div class="crown">
+        <div class="midcircle"></div>
+      </div>
+      <div class="sidecir cr1"></div>
+      <div class="sidecir cr2"></div>
+      <div class="sidecir cr3"></div>
+      <div class="sidecir cr4"></div>
+    </div>
+  </body>
+</html>
