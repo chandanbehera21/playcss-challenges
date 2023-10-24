@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>October_24</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .frame {
+        width: 400px;
+        height: 400px;
+        border: 2px solid;
+        border-radius: 20px;
+        background-color: #e9e3e6;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .bar {
+        width: 30px;
+        height: 290px;
+        background-color: #736f72;
+        position: absolute;
+        border: hidden;
+
+        .border {
+          width: 30px;
+          height: 20px;
+          clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+          background-color: #e9e3e6;
+          border: hidden;
+        }
+        .border:nth-child(1) {
+          rotate: 180deg;
+          bottom: 0;
+          position: absolute;
+        }
+      }
+      .bx1 {
+        rotate: 45deg;
+        scale: 0.9;
+        animation: rotate1 10s cubic-bezier(1, -0.61, 1, 1.07) 0s infinite
+          backwards;
+      }
+      .bx2 {
+        rotate: -45deg;
+        scale: 0.9;
+        animation: rotate1 10s cubic-bezier(1, -0.61, 1, 1.07) 0s infinite
+          backwards;
+      }
+      .bx3 {
+        rotate: 90deg;
+        animation: rotate 10s cubic-bezier(1, -0.61, 1, 1.07) 0s infinite
+          backwards;
+      }
+      .bx4 {
+        animation: rotate 10s cubic-bezier(1, -0.61, 1, 1.07) 0s infinite
+          backwards;
+      }
+      .midbox {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-color: #e9e3e6;
+        rotate: 45deg;
+      }
+      @keyframes rotate {
+        to {
+          rotate: 360deg;
+        }
+      }
+      @keyframes rotate1 {
+        to {
+          rotate: -360deg;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="bar bx1">
+        <div class="border"></div>
+        <div class="border"></div>
+      </div>
+      <div class="bar bx2">
+        <div class="border"></div>
+        <div class="border"></div>
+      </div>
+      <div class="bar bx3">
+        <div class="border"></div>
+        <div class="border"></div>
+      </div>
+      <div class="bar bx4">
+        <div class="border"></div>
+        <div class="border"></div>
+      </div>
+      <div class="midbox"></div>
+    </div>
+  </body>
+</html>
