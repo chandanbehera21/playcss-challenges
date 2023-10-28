@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>October_28</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #f11111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .frame {
+        width: 400px;
+        height: 400px;
+        border: 2px solid;
+        border-radius: 20px;
+        background-color: #4d5061;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        background-color: #cbbaed;
+        border-radius: 50%;
+        position: absolute;
+        top: 30px;
+        left: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+      }
+      .midcircle {
+        width: 70px;
+        height: 70px;
+        background: #4d5061;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        animation: rotate 5s ease 0s infinite;
+
+        .halfcircle {
+          width: 60px;
+          height: 64px;
+          background: #cbbaed;
+          border-radius: 50%;
+        }
+      }
+      @keyframes rotate {
+        to {
+          rotate: 360deg;
+        }
+      }
+      .circle:nth-child(1) {
+        left: 50px;
+        position: relative;
+        top: -120px;
+        rotate: 180deg;
+        z-index: 5;
+      }
+      .line {
+        width: 40px;
+        height: 260px;
+        background-color: #cbbaed;
+        position: absolute;
+        padding: 10px;
+
+        .midline {
+          width: 20px;
+          height: 160px;
+          background-color: #4d5061;
+          position: absolute;
+          margin-top: 60px;
+
+          z-index: 4;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          animation: swing 1s linear 0s infinite alternate;
+        }
+      }
+      @keyframes swing {
+        0% {
+          transform: rotate(20deg);
+        }
+        100% {
+          transform: rotate(-20deg);
+        }
+      }
+      .step {
+        width: 20px;
+        height: 80px;
+        background-color: #cbbaed;
+        position: absolute;
+        rotate: 90deg;
+        bottom: 100px;
+      }
+      #s2 {
+        bottom: 70px;
+        scale: 1.5;
+      }
+      #s3 {
+        bottom: 30px;
+        scale: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="circle">
+        <div class="midcircle">
+          <div class="halfcircle"></div>
+        </div>
+      </div>
+      <div class="circle">
+        <div class="midcircle">
+          <div class="halfcircle"></div>
+        </div>
+      </div>
+      <div class="line">
+        <div class="midline"></div>
+      </div>
+      <div class="step" id="s1"></div>
+      <div class="step" id="s2"></div>
+      <div class="step" id="s3"></div>
+    </div>
+  </body>
+</html>
